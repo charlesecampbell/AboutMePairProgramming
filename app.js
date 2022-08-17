@@ -81,15 +81,17 @@ if (typeof(q5) === 'string') {
 }
 console.log(q5);
 if (q5 === 'no') {
-  alert(user + ' I appreciate your enthusiasm for being relentlessly questioned');
+  alert(user + ', I appreciate your enthusiasm for being relentlessly questioned');
 }
 else if (q5 === 'yes') {
-  alert(user + ' Thank you for your honesty, I release you!');
+  alert(user + ', thank you for your honesty, I release you!');
 }
 else {
   alert('Answers only accepted in Yes/No format you peasant...');
   q5 = prompt('Would you rather be doing literally anything else right now? Yes or No');
 }
+
+
 
 
 
