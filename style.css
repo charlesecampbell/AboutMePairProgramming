@@ -10,10 +10,29 @@ h1 {
     color: rgba(12, 245, 12, 0.326); text-align: center; font-size: 100px;
 }
 
-div { 
+h2 {
+    color: rgba(12, 245, 12, 0.326); text-align: center; font-size: 50px;
+}
+
+div #MySummary { 
     width: 650px; margin-left: auto; margin-right: auto;
 }
 
+div #h2 { 
+    width: 300px; margin-left: auto; margin-right: auto;
+}
+
+div #List { 
+    width: 400px; margin-left: auto; margin-right: auto; padding: 1000px;
+}
+
+ul {
+    text-decoration: underline; margin: auto; text-align: center;
+}
+
+li {
+    margin:auto; text-align: center; color: rgb(42, 208, 42);
+}
 
 
 
