@@ -11,6 +11,16 @@ if (user === null) {
 }
 else (alert('Hello ' + user + ', my name is Timothy'));
 
+function oneQ(q,a) {
+  let response = prompt(q);
+    if (response.toLowerCase() === a.toLowerCase()) {
+      userPoints++
+      return 'Correct Answer!';
+    } else {
+      return 'Wrong Answer!';
+    }
+  }
+
 let q1 = prompt('Did you know that Marvel is better than DC? Yes or No');
 if (typeof(q1) === 'string') {
   q1 = q1.toLowerCase();
@@ -28,21 +38,12 @@ else {
   q1 = prompt('Did you know that Marvel is better than DC? Yes or No');
 }
 
-let q2 = prompt('Do you enjoy video games? Yes or No');
-if (typeof(q2) === 'string') {
-  q2 = q2.toLowerCase();
-}
-console.log(q2);
-if (q2 === 'no') {
-  alert('Well you are probably better off');
-}
-else if (q2 === 'yes') {
-  alert('Hey! Me too!');
-}
-else {
-  alert('Answers only accepted in Yes/No format you peasant...');
-  q2 = prompt('Do you enjoy video games? Yes or No');
-}
+  //Question 2
+  let ques = ['Do you like Video Games?'];
+  let answ = ['yes'];
+  for(let i = 0; i < ques.length; i++) {
+    alert(oneQ(ques[i], answ[i]));
+  }
 
 let q3 = prompt('Have you ever been socially awkward? Yes or No');
 if (typeof(q3) === 'string') {
@@ -112,23 +113,3 @@ else {
   alert('Please guess a single digit number.');
   q6 = prompt('Whats my favorite single digit number?');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
