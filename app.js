@@ -1,150 +1,115 @@
-'use strict';//strict syntax
+'use strict';
+let userPoints = 0;
 
-let total = 0;//Statrt correct answers counter
+console.log('JS is running');
 
-let name = prompt('What is your name?');
-alert('Hello ' + name);
-name = name.toLowerCase();
-//console.log(Name);
-document.write('Greetings ' + name + ', Welcome to my webpage. Please answer a few yes or no questions about me.');
+let user = prompt('What is your name?');
+console.log('hello ' + user);
+if (user === null) {
+  alert('Please provide your name');
+  user = prompt('What is your name?');
+}
+else (alert('Hello ' + user + ', my name is Timothy'));
 
-function degreeQ(q, a) {
+function oneQ(q,a) {
   let response = prompt(q);
-  if (response.toLowerCase() === a.toLowerCase()) {
-    total++;
-    return 'Correct';
-  } else {
-    return 'Incorrect';
-  }
-}
-
-//Ask Several Questions
-// Question 1.
-let user = prompt('Am I over 21 yeas old?');
-if (typeof (user) === 'string') {
-  user = user.toLowerCase();
-}
-//If no is Incorrect
-if (user === 'no') {
-  alert('Incorrect! I am over 21');
-  //console.log('Correct, I am over 21!');
-} else if (user === 'yes') {
-  //   console.log('Correct answer!');
-  alert('Correct answer!');
-  total++;
-}
-
-let degree = ['Do you have a degree?'];
-let answer = ['Yes'];
-// Question 2.
-for (let i = 0; i < degree.length; i++) {
-  alert(degreeQ(degree[i], answer[i]));
-}
-
-// Question 3.
-let social = prompt('Have I been a Social Worker?');
-if (typeof (social === 'string')) {
-  social = user.toLowerCase();
-} // one conditions have to be true
-if (social === 'yes' || social === 'y') {
-
-  //In case yes, correct
-  switch (social) {
-    case 'yes':
-      alert('Correct, I have a Bachelor\'s Degree!');
-      total++;
-      break;
-
-    case 'no':
-      alert('Incorrect answer!');
-      //   console.log('Incorrect answer!');
-      break;
-  }
-}
-
-// Question 4.
-let dancer = prompt('Can I dance?');
-if (typeof (dancer) === 'string') {
-  dancer = dancer.toLowerCase();
-}// one conditions have to be true
-if (dancer === 'yes' || dancer === 'y') {
-  //   console.log('Correct, I am a very good dancer!');
-}
-else if (dancer === 'no' || dancer === 'n') {
-  //In case yes, correct
-  switch (dancer) {
-    case 'yes':
-      alert('Correct, I have a Bachelor\'s Degree!');
-      total++;
-      break;
-
-    case 'no':
-      alert('Incorrect answer!');
-      //   console.log('Incorrect answer!');
-      break;
-  }
-}
-
-// Question 5.
-let startup = prompt('Do I own a tech startup?');
-if (typeof (startup) === 'string') {
-  startup = startup.toLowerCase();
-}
-//In case yes, correct
-switch (startup) {
-  case 'yes':
-    alert('Correct, I own Cuptoopia!!');
-    total++;
-    break;
-
-  case 'no':
-    alert('Incorrect answer!');
-    //   console.log('Incorrect answer!');
-    break;
-}
-
-// Question 6.
-let myFavoriteShows = ['StarTrek', 'Gun Smoke', 'Bull', 'All Rise', 'The Virginian', 'Lost In Space'];
-for (let i = 0; i < 4; i++) {
-  let myFavShowQ = prompt('What is one of my favorite TV Shows?');
-  let isFavorite = false;
-  for (let j = 0; j < myFavoriteShows.length; j++) {
-    if (myFavShowQ.toLowerCase() === myFavoriteShows[j].toLowerCase()) {
-      total++;
-      alert('Correct!');
-      isFavorite = true;
-      break;
+    if (response.toLowerCase() === a.toLowerCase()) {
+      userPoints++
+      return 'Correct Answer!';
+    } else {
+      return 'Wrong Answer!';
     }
   }
 
-  if (isFavorite === true) {
-    break;
-  } else {
-    alert('Incorrect');
-  }
+let q1 = prompt('Did you know that Marvel is better than DC? Yes or No');
+if (typeof(q1) === 'string') {
+  q1 = q1.toLowerCase();
 }
-alert('Your score is ' + total + ' out of 7');
+console.log(q1);
+if (q1 === 'no') {
+  alert('Guess who is wrong... Its you silly. Guess again.');
+  q1 = prompt('Did you know that Marvel is better than DC? Yes or No');
+}
+else if (q1 === 'yes') {
+  alert('That is absolutely correct and nobody would say otherwise!');
+}
+else {
+  alert('Answers only accepted in Yes/No format you peasant...');
+  q1 = prompt('Did you know that Marvel is better than DC? Yes or No');
+}
 
-// Question 7.
-let numberOfGuess = 6;
-let myFavoriteSongs = ['Shape of You', 'The Weeknd', 'Dance Monkey', 'rockstar', 'Someone You Loved','One Dance'];
-let userSongsGuess = prompt('What is one of my favorite Songs');
-let isFavorite = fasle;
-while(numberOfGuesses > 0) {
-  //iterate myFavooriteSong to see if userSongsGuess is inside, if it is set is favorite to true
-if (isFavorite === false) {
-  alert("Incorrect Song! ");
+  //Question 2
+  let ques = ['Do you like Video Games?'];
+  let answ = ['yes'];
+  for(let i = 0; i < ques.length; i++) {
+    alert(oneQ(ques[i], answ[i]));
+  }
+
+let q3 = prompt('Have you ever been socially awkward? Yes or No');
+if (typeof(q3) === 'string') {
+  q3 = q3.toLowerCase();
 }
-if (isFavorite === true) {
-  alert('Correct! You got it! My Favorite Songs are ' + myFavoriteSong + '.  You got a total of ' + correctAnswer + 'point. ');
-  total++;
-  break;
+console.log(q3);
+if (q3 === 'no') {
+  alert('Teach me your ways sensei!');
 }
-numberOfGuesses -= 1;
-break;
+else if (q3 === 'yes') {
+  alert('HA, NERD! But yeah me too....');
 }
-numberOfGuesses -= 1;
-if(numberOfGuesses === 0) {
-  alert('You ran out of attempts, sorry! The correct answer is one of the following ' +myFavoriteSong + '! You got a total of ' + correctAnswers + ' points.');
+else {
+  alert('Answers only accepted in Yes/No format you peasant...');
+  q3 = prompt('Have you ever been socially awkward? Yes or No');
 }
-userSongGuess = prompt('What is one of my favloite Songs?');
+
+let q4 = prompt('Are you tired of these pop up questions yet? Yes or No');
+if (typeof(q4) === 'string') {
+  q4 = q4.toLowerCase();
+}
+console.log(q4);
+if (q4 === 'no') {
+  alert('Cool, because theres one more.');
+}
+else if (q4 === 'yes') {
+  alert('Well too bad, theres one more.');
+}
+else {
+  alert('Answers only accepted in Yes/No format you peasant...');
+  q4 = prompt('Are you tired of these pop up questions yet? Yes or No');
+}
+
+let q5 = prompt('Would you rather be doing literally anything else right now? Yes or No');
+if (typeof(q5) === 'string') {
+  q5 = q5.toLowerCase();
+}
+console.log(q5);
+if (q5 === 'no') {
+  alert(user + ', I appreciate your enthusiasm for being relentlessly questioned');
+}
+else if (q5 === 'yes') {
+  alert(user + ', thank you for your honesty, I release you!');
+}
+else {
+  alert('Answers only accepted in Yes/No format you peasant...');
+  q5 = prompt('Would you rather be doing literally anything else right now? Yes or No');
+}
+
+
+alert('Now, two more questions with the possibility to earn points. Dont worry its Whos Line Is It Anyway rules, points dont matter!');
+
+let q6 = prompt('Whats my favorite single digit number?');
+if (q6 > 7) {
+  alert('Too high, try again.');
+  q6 = prompt('Whats my favorite single digit number?');
+}
+else if (q6 < 7) {
+  alert('Too low, try again.');
+  q6 = prompt('Whats my favorite single digit number?');
+}
+else if (q6 === 7) {
+  alert('Points for you!');
+  userpoints + 4;
+}
+else {
+  alert('Please guess a single digit number.');
+  q6 = prompt('Whats my favorite single digit number?');
+}
