@@ -1,39 +1,77 @@
-body {
-    background-color: dimgrey;
-}
-
-p {
-    color: rgb(166, 236, 166); text-align: center; font-size: larger;
-}
-
 h1 {
-    color: rgba(12, 245, 12, 0.326); text-align: center; font-size: 100px;
-}
+    font-family: helvetica;
+    background-color: rgb(206, 206, 124);
+    font-size: 60;
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(46, 13, 196);
+    margin: 10px auto 10px auto;
+    padding: 40px;
+  }
 
-h2 {
-    color: rgba(12, 245, 12, 0.326); text-align: left; font-size: 50px;
-}
+  h2 {
+    font-family: helvetica;
+    background-color: rgb(148, 138, 142);
+    font-size: 60;
+    text-align: left;
+    border: 5px;
+    border-style: solid;
+    border-color: green;
+    margin: 10px auto 10px auto;
+    padding: 5px;
+  }
+  
+body {
+    background-color: rgb(148, 161, 148);    
+    }
 
-div #MySummary { 
-    width: 650px; margin-left: auto; margin-right: auto;
-}
+  p {
+    color: hsl(271, 95%, 46%);
+  }
+  
+  .bio{
+      border: 5px;
+      color: hsl(271, 95%, 46%);
+      border-top: 1px;
+      background-color: burlywood;
+      border-style: solid;
+      border-color: darkblue;
+      margin-right: 600px;
+      margin-left: -5px;
+      margin-top: -5px;
+      font-size-adjust: medium;
+      padding: 10px;
+      text-align: left;
+      display: inline-block
+  }
 
-div #h2 { 
-    width: 300px;
-}
+  section p.more-content {
+    background-color: #67a15a;
+  }
+  
+  .more-content {
+    background-color: #0000FF;
+  }
+  
+  #something-else {
+    border: 5px dashed #00FF00;
+  }
 
-div #List { 
-    width: 400px; margin-left: auto; margin-right: auto;
-}
-
-ul {
-    text-decoration: underline; display: inline-block; color: rgb(42, 208, 42);
-}
-
-li {
-    text-align: left; 
-}
-
-
-
-
+  html {
+      background-color: rgb(128, 204, 204);
+      box-sizing: border-box;
+      padding-left: 20px;
+      
+  }
+    Footer {
+    font-family: helvetica;
+    background-color: rgb(148, 138, 142);
+    font-size: 14;
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-color: green;
+    margin: 10px auto 10px auto;
+    padding: 5px;
+    }
